@@ -1,0 +1,79 @@
+Q1a
+
+desc 
+
+Q1b
+select * from teaches;
+
+Q1c
+select name,dept_name
+from instructor;
+
+Q1d
+select name,salary
+from instructor
+where dept_name='comp.sci.';
+
+Q1e
+select *
+from instructor
+where salary < 90000;
+
+Q1f
+select name 
+from instructor
+where dept_name != 'comp.sci.';
+
+Q1g
+select distinct dept_name 
+from instructor;
+
+Q1h
+select course_id
+from teaches
+where semester='spring' and year=2009;
+
+Q1i
+select title
+from course
+where dept_name='comp.sci.' and credits != 3;
+
+Q1j
+select * 
+from course
+order by dept_name desc;
+
+Q1k
+alter table instructor add date_of_join date;
+
+Q1l
+update instructor
+set date_of_join='28/01/2004'
+where id=15151;
+select * from instructor;
+
+Q1m
+alter table instructor rename column dept_name to department;
+alter table course rename column dept_name to department;
+alter table department rename column dept_name to department;
+
+Q1n
+alter table prereq rename to prerequired;
+
+Q1o
+alter table course rename column course_id to sub_code;
+
+Q1P
+alter table instructor modify name varchar(50);
+
+Q1Q
+alter table instructor rename to faculty_info;
+
+Q1R
+alter table course modify sub_code varchar2(8);
+
+Q1s
+drop table prerequired;
+
+Q1t
+alter table department rename column building to builder;

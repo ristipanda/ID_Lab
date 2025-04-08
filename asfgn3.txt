@@ -1,0 +1,87 @@
+1a
+select course_id,title,credits
+from
+
+2a
+select avg(salary)
+from instructor
+where department='Physics';
+
+2b
+select dept_name , avg(salary)
+from instructor
+group by dept_name;
+
+2c
+sselect id,name,dept_name 
+from instructor
+where salary=(select max(salary) from instructor);
+
+2d
+select count(*)
+from instructor
+where dept_name='comp.sci.';
+
+2e
+select sum(credit)
+from course
+where dept_name='comp.sci.';
+
+2f
+select count(*),sum(salary)
+from instructor
+where dept_name in ('physics','comp.sci.');
+
+2g
+select sum(credits)
+from course
+where dept_name in ('comp.sci.','biology');
+
+2h
+select building,sum(budget)
+from department
+gropu by building;
+
+2i
+select dept_name,count(id)
+from instructor
+group by dept_name;
+
+2j
+select dept_name,count(*) as count
+from instructor
+group by dept_name
+order by count desc;
+
+2k
+select semester,count(course_id) 
+from teaches
+group by semester;
+
+2l
+select dept_name 
+from instructor
+group by dept_name having count(*)<2;
+
+2m
+select dept_name ,count(*) as c
+from (select dept_name from instructor where dept_name != 'finance')
+group by dept_name having c >= 2;
+
+2n
+select dept_name,sum(salary) as s
+from instructor 
+group by dept_name
+having s > 50000;
+
+2o
+select sum(budget)
+from department
+where building ='watson';
+
+2p
+select max(salary)
+from instructor 
+where dept_name='comp.sci.';
+
+

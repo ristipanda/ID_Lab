@@ -1,0 +1,69 @@
+q2
+create table instructor(id number(5),name varchar2(30),dept_name varchar2(20),salary number(6));
+insert into instructor(id,name,dept_name,salary) values(10101,'srinivasan','comp.sci.',65000);
+insert into instructor(id,name,dept_name,salary) values(12121,'wu','finance',90000);
+insert into instructor(id,name,dept_name,salary) values(15151,'mozart','music',40000);
+insert into instructor(id,name,dept_name,salary) values(22222,'einstein','physics',95000);
+insert into instructor(id,name,dept_name,salary) values(32343,'el said','history',60000);
+insert into instructor(id,name,dept_name,salary) values(33456,'gold','physics',87000);
+insert into instructor(id,name,dept_name,salary) values(45565,'katz','comp.sci.',75000);
+insert into instructor(id,name,dept_name,salary) values(58583,'califieri','history',62000);
+insert into instructor(id,name,dept_name,salary) values(76543,'singh','finance',80000);
+insert into instructor(id,name,dept_name,salary) values(76766,'crick','biology',72000);
+insert into instructor(id,name,dept_name,salary) values(83821,'brandt','comp.sci.',92000);
+insert into instructor(id,name,dept_name,salary) values(98345,'kim','elec.eng.',80000);
+
+q3
+create table course(course_id varchar2(10),title varchar2(30),dept_name varchar2(20),credits number(2));
+insert into course(course_id,title,dept_name,credits) values('bio-101','intro. to biology','biology',4);
+insert into course(course_id,title,dept_name,credits) values('bio-301','genetics','biology',4);
+insert into course(course_id,title,dept_name,credits) values('bio-399','computational biology','biology',3);
+insert into course(course_id,title,dept_name,credits) values('cs-101','intro. to computer science','comp.sci.',4);
+insert into course(course_id,title,dept_name,credits) values('cs-190','game design','comp.sci.',4);
+insert into course(course_id,title,dept_name,credits) values('cs-315','robotics','comp.sci.',3);
+insert into course(course_id,title,dept_name,credits) values('cs-319','image processing','comp.sci.',3);
+insert into course(course_id,title,dept_name,credits) values('cs-347','database system concepts','comp.sci.',3);
+insert into course(course_id,title,dept_name,credits) values('ee-181','intro. to digital systems','elec.eng.',3);
+insert into course(course_id,title,dept_name,credits) values('fin-201','investment banking','finance',3);
+insert into course(course_id,title,dept_name,credits) values('his-351','world history','history',3);
+insert into course(course_id,title,dept_name,credits) values('mu-199','music video production','music',3);
+insert into course(course_id,title,dept_name,credits) values('phy-101','physical principles','physics',4);
+q4
+
+insert into prereq(course_id,prereq_id) values('bio-301','bio-101');
+insert into prereq(course_id,prereq_id) values('bio-399','bio-101');
+insert into prereq(course_id,prereq_id) values('cs-190','cs-101');
+insert into prereq(course_id,prereq_id) values('cs-315','cs-101');
+insert into prereq(course_id,prereq_id) values('cs-319','cs-101');
+insert into prereq(course_id,prereq_id) values('cs-347','cs-101');
+insert into prereq(course_id,prereq_id) values('ee-181','phy-101');
+
+q5
+create table department(dept_name varchar2(20),building varchar2(10),budget number(10));
+insert into department(dept_name,building,budget) values('biology','watson',90000);
+insert into department(dept_name,building,budget) values('comp.sci.','taylor',100000);
+insert into department(dept_name,building,budget) values('elec.eng.','taylor',85000);
+insert into department(dept_name,building,budget) values('finance','painter',120000);
+insert into department(dept_name,building,budget) values('history','painter',50000);
+insert into department(dept_name,building,budget) values('music','packard',80000);
+insert into department(dept_name,building,budget) values('physics','watson',70000);
+
+q6
+create table teaches(id number(5),course_id varchar2(10),sec_id number(2),semester varchar2(10),year number(4));
+insert into teaches(id,course_id,sec_id,semester,year) values(10101,'cs-101',1,'fall',2009);
+insert into teaches(id,course_id,sec_id,semester,year) values(10101,'cs-315',1,'spring',2010);
+insert into teaches(id,course_id,sec_id,semester,year) values(10101,'cs-347',1,'fall',2009);
+insert into teaches(id,course_id,sec_id,semester,year) values(12121,'fin-201',1,'spring',2010);
+insert into teaches(id,course_id,sec_id,semester,year) values(15151,'mu-199',1,'spring',2010);
+insert into teaches(id,course_id,sec_id,semester,year) values(22222,'phy-101',1,'fall',2009);
+insert into teaches(id,course_id,sec_id,semester,year) values(32343,'his-351',1,'spring',2010);
+insert into teaches(id,course_id,sec_id,semester,year) values(45565,'cs-101',1,'spring',2010);
+insert into teaches(id,course_id,sec_id,semester,year) values(45565,'cs-319',1,'spring',2010);
+insert into teaches(id,course_id,sec_id,semester,year) values(76766,'bio-101',1,'summer',2009);
+insert into teaches(id,course_id,sec_id,semester,year) values(76766,'bio-301',1,'summer',2010);
+insert into teaches(id,course_id,sec_id,semester,year) values(83821,'cs-190',1,'spring',2009);
+insert into teaches(id,course_id,sec_id,semester,year) values(83821,'cs-190',2,'spring',2009);
+insert into teaches(id,course_id,sec_id,semester,year) values(83821,'cs-319',2,'spring',2010);
+insert into teaches(id,course_id,sec_id,semester,year) values(98345,'ee-181',1,'spring',2009);
+
+
